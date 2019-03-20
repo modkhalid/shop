@@ -23,12 +23,12 @@ export class SignupComponent implements OnInit {
 
   onSubmit() {
     console.log(this.form.value);
-    let x;
+    // let x;
     this.service.register(this.form.value).subscribe(response => {
-      // console.log(response);
-      x = response;
+      console.log(response);
+      // x = response;
     });
-    console.log(x);
+    // console.log(x);
     this.form.reset();
   }
 }

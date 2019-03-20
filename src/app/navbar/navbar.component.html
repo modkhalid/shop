@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<!-- <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
   <a class="navbar-brand" routerLink="/">Home</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -25,5 +25,44 @@
         </div>
       </li>
     </ul>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow mb-5 rounded sticky-top">
+  <a class="navbar-brand" routerLink="/">
+    <img src="/assets/images/main.png" alt="city saloon" style="max-width:50px;border-radius:25px;max-height:50px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      
+      <li class="nav-item">
+          <a class="nav-link" routerLink="/shopping-cart" routerLinkActive="active current">Shopping Cart</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login"  routerLinkActive="active current">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup"  routerLinkActive="active current">Register</a>
+        </li>
+      <li ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Username</a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
+            <a class="dropdown-item" routerLink="/my/orders"  routerLinkActive="active current">My Orders</a>
+            <a class="dropdown-item" routerLink="/admin/orders"  routerLinkActive="active current">Manage Orders</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink="/admin/products"  routerLinkActive="active current">Manage Products</a>
+            <a class="dropdown-item"  routerLinkActive="active current">Log Out</a>
+          </div>
+        </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
   </div>
 </nav>

@@ -16,6 +16,7 @@ export class CrudService {
   register(post) {
     const fd = new FormData();
     fd.append('signup', JSON.stringify(post));
+
     return this.http.post(this.url, fd).pipe(
       catchError(this.ErrorHandlerMethod)
     );
